@@ -18,7 +18,8 @@ interface Message {
 export class AppComponent implements OnInit {
   messages: Message[] = [];
   newMessage: Message = { name: '', text: '' };
-  apiUrl = 'http://localhost:8080/messages';
+  apiUrl = 'https://social-app-production-25d5.up.railway.app/messages';
+
 
   constructor(private http: HttpClient) {}
 

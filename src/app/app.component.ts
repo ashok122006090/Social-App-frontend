@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 interface Message {
   name: string;
   text: string;
+  emotion?: string; // 🧠 Added emotion field
 }
 
 @Component({
@@ -18,8 +19,7 @@ interface Message {
 export class AppComponent implements OnInit {
   messages: Message[] = [];
   newMessage: Message = { name: '', text: '' };
-  apiUrl = 'https://social-app-production-25d5.up.railway.app/messages';
-
+  apiUrl = 'http://localhost:8080/messages'; // Your Spring Boot API
 
   constructor(private http: HttpClient) {}
 

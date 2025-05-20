@@ -12,6 +12,15 @@
   <div class="message-list">
     <div *ngFor="let msg of messages" class="message">
       <strong>{{ msg.name }}:</strong> {{ msg.text }}
+      <span *ngIf="msg.emotion">
+        🧠 {{ msg.emotion }}
+        <span *ngIf="msg.emotion === 'joy'">😊</span>
+        <span *ngIf="msg.emotion === 'sadness'">😢</span>
+        <span *ngIf="msg.emotion === 'anger'">😠</span>
+        <span *ngIf="msg.emotion === 'fear'">😨</span>
+        <span *ngIf="msg.emotion === 'love'">❤️</span>
+        <span *ngIf="msg.emotion === 'surprise'">😲</span>
+      </span>
     </div>
   </div>
 </div>
